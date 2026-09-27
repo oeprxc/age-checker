@@ -32,7 +32,7 @@ Enter your date of birth, and the application calculates your current age in yea
 - Basic validation
 - CSS styling
 
-## 📁 Components
+# Components
 
 - Header: Contains the application heading.
 - AgeForm: Handles the date input, age calculation, and displays the result.
