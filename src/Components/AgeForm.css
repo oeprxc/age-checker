@@ -8,7 +8,7 @@
 #date {
   margin-top: 1rem;
   width: 100%;
-  padding: 1.2rem;
+  padding: 1.3rem;
   cursor: pointer;
   font-size: 1.5rem;
   border: 1px solid #ccc;
@@ -22,7 +22,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .buttonContainer {
@@ -30,7 +30,7 @@
 }
 
 #btn {
-  padding: 1.2rem;
+  padding: 1.3rem;
   border: none;
   color: white;
   background-color: #1877f2;
@@ -38,11 +38,12 @@
   border-radius: 8px;
   cursor: pointer;
   width: 100%;
-  transition: box-shadow 0.3s;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.4s;
 }
 
 #btn:hover {
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+ background-color: #395cdb;
 }
 
 #btn:active {
