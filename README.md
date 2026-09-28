@@ -40,3 +40,10 @@ Enter your date of birth, and the application calculates your current age in yea
 # Project Goal
 
 To strengthen my React fundamentals by building a small application independently and practicing form handling, state, and date calculations.
+
+# How to Run Locally
+
+git clone https://github.com/oeprxc/age-checker.git
+cd age-checker
+npm install
+npm run dev
