@@ -42,8 +42,8 @@ Enter your date of birth, and the application calculates your current age in yea
 To strengthen my React fundamentals by building a small application independently and practicing form handling, state, and date calculations.
 
 # How to Run Locally
-
-git clone https://github.com/oeprxc/age-checker.git
-cd age-checker
+```bash
+git clone https://github.com/oeprxc/movie-search-app.git
+cd movie-search-app
 npm install
 npm run dev
