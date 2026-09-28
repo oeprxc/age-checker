@@ -11,7 +11,7 @@
 
  :root {
   --text-color: black;
-  --font-size: 1.8rem;
+  --font-size: 1.7rem;
  }
 
  body {
@@ -27,7 +27,6 @@
  }
 
  .card {
-  border: 1px solid black;
   width: 100%;
   min-height: 100vh;
  }

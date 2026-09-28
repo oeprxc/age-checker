@@ -1,101 +1,109 @@
-import { useState } from "react"
-import "./AgeForm.css"
+import { useState } from "react";
+import "./AgeForm.css";
 
 const AgeForm = () => {
-    const [userDate, setUserDate] = useState ("")
+  const [userDate, setUserDate] = useState("");
 
-    // ErrorMesaage
-    const [errorMesaage, setErroMessage] = useState("")
+  // ErrorMesaage
+  const [errorMesaage, setErroMessage] = useState("");
 
+  // Age details state
+  const [header, setHeader] = useState("");
+  const [years, setYears] = useState("");
+  const [months, setMonths] = useState("");
+  const [days, setDays] = useState("");
 
-    // Age details state
-    const [header, setHeader] = useState("")
-    const [years, setYears] = useState("")
-     const [months, setMonths] = useState("")
-      const [days, setDays] = useState("")
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        
-        const inputDate = userDate
+    const inputDate = userDate;
 
-        // Validate user Input.
-        if(inputDate === ""){
-            setErroMessage("Please enter a date of birth.")
-        } else {
-          const todayDate = new Date()
+    // Validate user Input.
+    if (inputDate === "") {
+      setErroMessage("Please enter a date of birth.");
+    } else {
+      setErroMessage("");
+      const todayDate = new Date();
 
-          const birthDate = new Date(inputDate)
+      const birthDate = new Date(inputDate);
 
-          const birthYear = birthDate.getFullYear()
-           
-        // birthMonth
-        const birthMonth = birthDate.getMonth()
+      const birthYear = birthDate.getFullYear();
 
-        // birthDay
-        const birthDay = birthDate.getDate()
+      // birthMonth
+      const birthMonth = birthDate.getMonth();
 
-        //Year
-        const currentYear = todayDate.getFullYear()
+      // birthDay
+      const birthDay = birthDate.getDate();
 
-        const currentMonth = todayDate.getMonth()
+      //Year
+      const currentYear = todayDate.getFullYear();
 
-        const currentDay = todayDate.getDate()
+      // Month
+      const currentMonth = todayDate.getMonth();
 
-        let ageYears = currentYear - birthYear
+      // Day
+      const currentDay = todayDate.getDate();
 
-        let ageMonths = currentMonth - birthMonth
+      let ageYears = currentYear - birthYear;
 
-        let ageDays = currentDay - birthDate
+      let ageMonths = currentMonth - birthMonth;
 
-        if(ageDays < 0) {
-            ageMonths--
+      let ageDays = currentDay - birthDay;
 
-            const daysInPreviousMonth = new Date(currentYear, currentMonth, 0).getDate()
-        }
+      if (ageDays < 0) {
+        ageMonths--;
 
-        if(ageMonths < 0) {
-            ageYears--
-            ageMonths += 12
-        }
+        const daysInPreviousMonth = new Date(
+          currentYear,
+          currentMonth,
+          0,
+        ).getDate();
+      }
 
-        setHeader("Your Age")
-        setYears(`${ageYears} Years`)
-         setMonths(`${ageMonths} Months`)
-          setDays(`${ageDays} Days`)
+      if (ageMonths < 0) {
+        ageYears--;
+        ageMonths += 12;
+      }
 
-        }
+      setHeader("Your Age");
+      setYears(`${ageYears} Years`);
+      setMonths(`${ageMonths} Months`);
+      setDays(`${ageDays} Days`);
     }
+  };
 
-    return (
-        <>
-
-        <div className="ageContainer">
-
+  return (
+    <>
+      <div className="ageContainer">
         <form action="" onSubmit={handleSubmit}>
-       <p>Date of Birth</p>
-       <input type="date" name="date" id="date" value={userDate} onChange={(event => setUserDate(event.target.value))}/>
-       <p>{errorMesaage}</p>
+          <p style={{ textAlign: "center" }}>Date of Birth</p>
+          <input
+            type="date"
+            name="date"
+            id="date"
+            value={userDate}
+            onChange={(event) => setUserDate(event.target.value)}
+          />
+          <p>{errorMesaage}</p>
 
-       {/* Age button */}
-       <div id="btn">
-        <button type="submit">Check my age</button>
-       </div>
+          {/* Age button */}
+          <div className="buttonContainer">
+            <button id="btn" type="submit">
+              Check my age
+            </button>
+          </div>
         </form>
+      </div>
 
-        </div>
-
-        <div className="ageDetailContainer">
-
+      <div className="ageDetailContainer">
         <div className="ageDetail">
-        <h3>{header}</h3>
-        <p>{years}</p>
-         <p>{months}</p>
-         <p>{days}</p>
+          <h3>{header}</h3>
+          <p>{years}</p>
+          <p>{months}</p>
+          <p>{days}</p>
         </div>
-
-        </div>
-        </>
-    )
-}
-export default AgeForm
+      </div>
+    </>
+  );
+};
+export default AgeForm;
