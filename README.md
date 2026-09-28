@@ -43,7 +43,7 @@ To strengthen my React fundamentals by building a small application independentl
 
 # How to Run Locally
 ```bash
-git clone https://github.com/oeprxc/movie-search-app.git
-cd movie-search-app
+git clone https://github.com/oeprxc/age-checker.git
+cd age-checker
 npm install
 npm run dev
