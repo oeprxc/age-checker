@@ -52,7 +52,7 @@
 }
 
 #btn:hover {
- background-color: #0D65D9;
+  background-color: #0d65d9;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.18);
 }
 
@@ -62,6 +62,6 @@
 }
 
 #btn:disabled {
-  background-color: #0D65D9;
- cursor: not-allowed;
+  background-color: #0d65d9;
+  cursor: not-allowed;
 }

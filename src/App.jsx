@@ -1,27 +1,23 @@
 import { useState } from "react";
 import "./App.css";
-import "./index.css"
+import "./index.css";
 import Header from "./Components/Header";
 import AgeForm from "./Components/AgeForm";
 
 const App = () => {
-  return <>
- 
+  return (
+    <>
+      <div className="container">
+        <div className="card">
+          {/* Header */}
+          <Header />
 
-<div className="container">
-
-  <div className="card">
-    {/* Header */}
-     <Header/>
-
-     {/* Main */}
-     <AgeForm/>
-  </div>
-</div>
-
-
-
-  </>;
+          {/* Main */}
+          <AgeForm />
+        </div>
+      </div>
+    </>
+  );
 };
 
-export default App
+export default App;
