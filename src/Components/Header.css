@@ -1,0 +1,10 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #1877F2;
+    color: white;
+    line-height: 1.3;
+}

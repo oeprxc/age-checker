@@ -1,0 +1,13 @@
+.ageContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+ #btn {
+    margin-top: 3rem;
+ }
+
+ #date {
+    margin-top: 1rem;
+ }
